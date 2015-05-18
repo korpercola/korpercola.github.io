@@ -63,7 +63,7 @@ dfn {
 h1 {
   padding: 1em;
   margin: .67em 0;
-  font-size: 2em;
+  font-size: 5em;
   font-family: Futura LT medium, sans-serif;
   font-style:italic;
   letter-spacing:.1em;
@@ -1274,7 +1274,7 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 60px;
 }
 h2,
 .h2 {
@@ -1290,11 +1290,18 @@ h4,
 }
 h5,
 .h5 {
-  font-size: 14px;
+  font-size: 16px;
+  padding-left:3.7em;
+  padding-bottom:5em;
+  margin-top:-3.8em;
 }
 h6,
 .h6 {
   font-size: 12px;
+  padding-left:5em;
+  padding-bottom:5em;
+  margin-top:-5em;
+
 }
 p {
   margin: 0 0 10px;
