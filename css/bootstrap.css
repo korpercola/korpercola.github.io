@@ -50,7 +50,7 @@ a:active,
 a:hover {
   outline: 0;
 }
-abbr[title] {
+abbr[title] { 
   border-bottom: 1px dotted;
 }
 b,
@@ -1106,7 +1106,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #555;
   text-decoration: none;
 }
 a:hover,
@@ -1118,6 +1118,9 @@ a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
+}
+a:visited {
+  color: #04255E;
 }
 figure {
   margin: 0;
@@ -1292,8 +1295,10 @@ h5,
 .h5 {
   font-size: 16px;
   padding-left:3.7em;
-  padding-bottom:5em;
-  margin-top:-3.8em;
+  padding-bottom:2em;
+  margin-top:10em;
+  clear:both;
+  float:right;
 }
 h6,
 .h6 {
@@ -1624,6 +1629,7 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  margin-bottom:1em;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
