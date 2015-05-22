@@ -10,7 +10,9 @@ li{
 	padding-top: 10em;
 	padding-bottom: 10em;
 }
-
+div{
+-webkit-animation: opacity_01 3s ease 0s 1 alternate;
+}
 
 .embFont02{
 	color:#333;
@@ -39,7 +41,6 @@ li{
 	position: relative;
 	padding-top: .5em;
 	margin-bottom: -.2em;
-	-webkit-animation: opacity_01 3s ease 0s 1 alternate;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
  
@@ -48,7 +49,7 @@ li{
 @-webkit-keyframes opacity_01
 {
     0% { opacity: 0 ; }
-  100% { opacity: .8; }
+  100% { opacity: 1; }
 }
 @-webkit-keyframes opacity_02
 {
