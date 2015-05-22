@@ -1304,9 +1304,7 @@ h5,
 h6,
 .h6 {
   font-size: 12px;
-  padding-left:5em;
-  padding-bottom:5em;
-  margin-top:-5em;
+  text-align:center;
 
 }
 p {
