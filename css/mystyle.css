@@ -20,17 +20,16 @@ div{
 }
 
 
-p{
+.embFont02{
 	color:#333;
 	margin: .4em;
 	margin-right: -.4em;
 	text-align: right;
-	font-family: Helvetica Neue LT Std;
+	font-family: T2;
 	font-weight: 200;
 	font-size: 27px;
 	-webkit-font-smoothing: antialiased;
 	-webkit-animation: opacity_01 7s ease 0s 1 alternate;
-	z-index: 2;
 }
 /*element.style {
   -webkit-animation: bg-color 2s cubic-bezier(0.6, -0.5, 0.4, 1.4) 0s infinite normal none running;
@@ -39,14 +38,11 @@ p{
 
 
 /* 嵌入字型設定 */
-@font-face {
-  font-family: TT;
-  src: url(fonts/glyphicons-halflings-regular.ttf);
-}
+
  
 /* 引用嵌入字型 */
 .embFont01 {
-    font-family: TT;
+    font-family: T1;
     font-size: 130px;
 	font-weight: 100;
 	position: relative;
@@ -54,7 +50,6 @@ p{
 	margin-bottom: -.2em;
 	-webkit-animation: opacity_01 3s ease 0s 1 alternate;
 	-webkit-font-smoothing: subpixel-antialiased;
-	z-index: 200;
 }
  
 
