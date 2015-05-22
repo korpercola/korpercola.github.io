@@ -7,8 +7,7 @@ li{
 	width:20em;
 	height:50em;
 	margin: 0 auto;
-	padding-top: 10em;
-	padding-bottom: 10em;
+	padding-top: 5em;
 }
 div{
 -webkit-animation: opacity_01 3s ease 0s 1 alternate;
