@@ -42,12 +42,12 @@ p{
 /* 嵌入字型設定 */
 @font-face {
     font-family: Bariol;
-    src: url(fonts\Bariol.oft);
+    src: local(fonts/Bariol_Thin.oft);
 }
  
 /* 引用嵌入字型 */
 .embFont01 {
-    font-family: Bariol;
+    font-family: Bariol
     font-size: 130px;
 	font-weight: 100;
 	position: relative;
