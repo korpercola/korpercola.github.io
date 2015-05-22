@@ -38,16 +38,16 @@ p{
 }*/
 
 
-<style type="text/css">
 /* 嵌入字型設定 */
 @font-face {
-    font-family: Bariol;
-    src: local(fonts/Bariol_Thin.oft);
+  font-family: TT;
+  src: local("Bariol"),
+    url(fonts/Bariol_Thin.otf);
 }
  
 /* 引用嵌入字型 */
 .embFont01 {
-    font-family: Bariol
+    font-family: TT;
     font-size: 130px;
 	font-weight: 100;
 	position: relative;
