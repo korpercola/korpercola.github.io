@@ -8,7 +8,7 @@ div{
 	margin: 0 auto;
 }
 .title_t{
-	font-family: bariol;
+	font-family: Bariol;
 	font-weight: 100;
 	font-size: 130px;
 	position: relative;
@@ -36,6 +36,29 @@ p{
   -webkit-animation: bg-color 2s cubic-bezier(0.6, -0.5, 0.4, 1.4) 0s infinite normal none running;
   -webkit-animation-play-state: running;
 }*/
+
+
+<style type="text/css">
+/* 嵌入字型設定 */
+@font-face {
+    font-family: Bariol;
+    src: url(fonts\Bariol.oft);
+}
+ 
+/* 引用嵌入字型 */
+.embFont01 {
+    font-family: Bariol;
+    font-size: 130px;
+	font-weight: 100;
+	position: relative;
+	padding-top: .5em;
+	margin-bottom: -.2em;
+	-webkit-animation: opacity_01 3s ease 0s 1 alternate;
+	-webkit-font-smoothing: subpixel-antialiased;
+	z-index: 200;
+}
+ 
+
 
 @-webkit-keyframes opacity_01
 {
