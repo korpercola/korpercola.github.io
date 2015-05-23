@@ -1,0 +1,150 @@
+body {
+	background-color: rgba(23,44,60,1);
+	background-size:100%;
+	background-repeat: no-repeat;
+	font-family:AvenirNextLTPro-BoldCnIt, sans-serif;
+	letter-spacing:2px;
+	width: 1350x;
+	margin:0;
+	/*overflow: hidden;*/
+}
+
+.logo img{
+	-webkit-animation: fadein 5s;
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:	auto;
+}
+
+.logo2 img{
+	position: absolute;
+	top:1950px;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:	auto;
+}
+
+.logo3 img{
+	-webkit-animation: fadein 5s;
+	position: absolute;
+	top:5450;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:	auto;
+}
+
+.logo4 img{
+	-webkit-animation: fadein 5s;
+	position: absolute;
+	top:9000;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:	auto;
+}
+
+p {
+	font-size: 7px;
+	text-align: center;
+	margin-top: -35px;
+	margin-bottom: 20px;
+	padding-left: 30px;
+	letter-spacing:3px;
+}
+
+.frame {
+	/*background-image:url('images/background.jpg');*/
+	width: 1280px;
+	height: 760px;
+	float: left;
+}
+
+.sidebar_popout{
+	background: rgba(217,104,49,1);
+	width: 250px;
+	height: 705px;
+	position:absolute;
+	z-index:1;
+	-webkit-transform: translate(-90%, 0);
+	-webkit-transition: .5s;
+	position:fixed;
+	}
+
+.sidebar_popout:hover{
+	-webkit-transform: translate(0, 0);}
+
+.button{
+	-webkit-transition: .5s;
+	-webkit-filter: blur(2px);
+	/*overflow: hidden;*/
+}
+
+.button .button_text {
+	font-size: 30px;
+	/*text-align: center;*/
+
+	padding: 40px;
+	margin: -10px;}
+
+.button:hover{
+	padding: 20px;
+	padding-right: 35px;
+	background: rgba(230,179,61,1);
+	color:rgba(0,0,0,1);
+	-webkit-filter: blur(0px);
+	-webkit-transform: translate(10%, 0);
+	}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+
+body, html {
+    height: 110%; 
+}
+.fixed-bg {
+    min-height: 100%;
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+     
+}
+.fixed-bg.bg-1 {
+   background-image: url(images/background.jpg);
+    -webkit-animation: fadein .5s;
+
+}
+.fixed-bg.bg-2 {
+    background-image: url(images/background002.jpg);
+}
+.fixed-bg.bg-3 {
+    background-image: url(images/background003.jpg);
+}
+.fixed-bg.bg-4 {
+    background-image: url(images/background004.jpg);
+}
+.scrolling {
+    min-height: 100%;
+    /*width:200px;*/
+    background: rgba(0,0,0,0.8);
+    margin: 25px;
+}
+h3{
+	font-size:25;
+	margin: 0;
+	padding:500px;
+	text-align: center;
+	color:white;
+}
