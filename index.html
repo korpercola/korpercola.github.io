@@ -1,54 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<style>
-			@font-face {
-		 	font-family: T1;
-		  	src: url('fonts/Bariol_Thin.otf');
-			}
-			@font-face {
-		 	font-family: T2;
-		  	src: url('fonts/HelveticaNeueLTPro-UltLt.otf');
-			}
-		</style>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Henc </title>
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
-		<link rel="stylesheet" href="css/bootstrap.css" />
-		<link rel="stylesheet" href="css/mystyle.css" />
-	</head>
-	
-	<body>
-		<body>
-	<div class=title> 
-		<h2 class="embFont01">Henc</h1> 
-		<p  class="embFont02">workshop</p>
-	</div>
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>³æ­¶½ü¼·¦¡ºô¯¸³]­p</title>
+<!--    ¶×¤JjQuery    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="jquery.mousewheel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var num_li=$("li").length//°»´ú§Ú­Ì¦³´X­Ó¼ĞÂI¡]¹Ï¤ù¡^
+            
+            //ºu°Ê·Æ¹«ºu½ü®É¡A²¾°Ê¨ì¤W¤@­¶¡B¤U¤@­¶ªº®ÄªG
+            n=1
+            moving=0
+            $(window).mousewheel(function(e){
+                $("html,body").stop()
+                if(moving==0){
+                    moving=1
+                    if(e.deltaY==-1){
+                        if(n<num_li){
+                            n++
+                        }
+                    }else{
+                        if(n>1){
+                            n--
+                        }
+                    }
+                }
+                $("html,body").animate({"scrollTop":$(".p0"+n).offset().top},function(){moving=0})
+                console.log(n)
+            })
+            
+            //®Ú¾Ú±²¶bªº¦ì¸m§ïÅÜ¥k¤è¾ÉÄı¦C´å¼ĞªºÃC¦â
+            $(window).scroll(function(){
+                 if($(window).scrollTop()>=$(".p01").offset().top && $(window).scrollTop()<$(".p02").offset().top){
+                    $(".nav li").css("background-color","white")//°£¤F³QÂIÀ»¨ìªº´å¼Ğ¡A¨ä¥L³£«ì´_¦¨­ì¨ÓªºÃC¦â
+                    $(".nav li:eq(0)").css("background-color","#46dd46")
+                }else if($(window).scrollTop()>=$(".p02").offset().top && $(window).scrollTop()<$(".p03").offset().top){
+                    $(".nav li").css("background-color","white")//°£¤F³QÂIÀ»¨ìªº´å¼Ğ¡A¨ä¥L³£«ì´_¦¨­ì¨ÓªºÃC¦â
+                    $(".nav li:eq(1)").css("background-color","#46dd46")
+                }else if($(window).scrollTop()>=$(".p03").offset().top && $(window).scrollTop()<$(".p04").offset().top){
+                    $(".nav li").css("background-color","white")//°£¤F³QÂIÀ»¨ìªº´å¼Ğ¡A¨ä¥L³£«ì´_¦¨­ì¨ÓªºÃC¦â
+                    $(".nav li:eq(2)").css("background-color","#46dd46")
+                }else if($(window).scrollTop()>=$(".p04").offset().top && $(window).scrollTop()<$(".p05").offset().top){
+                    $(".nav li").css("background-color","white")//°£¤F³QÂIÀ»¨ìªº´å¼Ğ¡A¨ä¥L³£«ì´_¦¨­ì¨ÓªºÃC¦â
+                    $(".nav li:eq(3)").css("background-color","#46dd46")
+                }else if($(window).scrollTop()>=$(".p05").offset().top){
+                    $(".nav li").css("background-color","white")//°£¤F³QÂIÀ»¨ìªº´å¼Ğ¡A¨ä¥L³£«ì´_¦¨­ì¨ÓªºÃC¦â
+                    $(".nav li:eq(4)").css("background-color","#46dd46")
+                }
+            })
+                     
+            //ÂI¿ï¥k¤è¾ÉÄı¦C®É·|¨ì«ü©w¹Ï¤ù
+            for(i=0;i<=num_li;i++){
+                $(".nav li:eq("+i+")").click({id:i},function(e){
+                    $("html,body").stop()
+                    $(".nav li").css("background-color","white")//°£¤F³QÂIÀ»¨ìªº´å¼Ğ¡A¨ä¥L³£«ì´_¦¨­ì¨ÓªºÃC¦â
+                    page=e.data.id+1
+                    $("html,body").animate({"scrollTop":$(".p0"+page).offset().top})
+                    $(".nav li:eq("+e.data.id+")").css("background-color","#46dd46")//³QÂIÀ»¨ìªº´å¼ĞÅÜ¦â¡A«e­±ªºselector¥Îthis¤]¥i¥H
+                    n=e.data.id+1
+                })
+            }
+            //¤@¶i¤Jºô­¶®É¡A±N¾ÉÄı¦C««ª½¸m¤¤­pºâ¾ÉÄı¦C¸m¤¤ªº¦ì¸m
+           center()
+            
+           //ÁY©ñºô­¶®É¡A±N¾ÉÄı¦C««ª½¸m¤¤
+            $(window).resize(function(){
+                center()
+            })
+            
+            //­pºâ¾ÉÄı¦C««ª½¸m¤¤ªº°ª«×
+            function center(){
+                pos=$(window).height()/2-$(".nav").height()/2
+                $(".nav").css("top",pos)
+            }
+            
+        })
+    </script>
+<style>
+    *{
+        padding:0;
+        margin:0;
+    }
+    body{
+        overflow: hidden;
+    }
+/*    ´¡¤J­I´º¹Ï¤ù    */
+    .p01{
+        background-image:url(images/p01.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        height:100vh;
+    }
+    .p02{
+        background-image:url(images/p02.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        height:100vh;
+    }
+    .p03{
+        background-image:url(images/p03.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        height:100vh;
+    }
+    .p04{
+        background-image:url(images/p04.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        height:100vh;
+    }
+    .p05{
+        background-image:url(images/p05.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        height:100vh;
+    }
+/*    ´¡¤J¾ÉÄı¦C     */
+    .nav{
+        position: fixed;
+        top:50%;
+        right:0px;
+        cursor:pointer;
+    }
+    li{
+        width:10px;
+        height:10px; 
+        margin: 10px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px rgba(0,0,0,0.5) inset,-1px -1px 1px rgba(0,0,0,0.5) inset;
+        list-style-type: none;
+    }
+    h1{
+        font-size:60px;
+        color:ghostwhite;
+        text-shadow:0px 0px 15px black;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="nav">
+        <ul>
+            <li style="background-color:#46dd46"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="p01"><h1>Page 1</h1></div>
+    <div class="p02"><h1>Page 2</h1></div>
+    <div class="p03"><h1>Page 3</h1></div>
+    <div class="p04"><h1>Page 4</h1></div>
+    <div class="p05"><h1>Page 5</h1></div>
+</div>
 
-	<div class="container">
-		<a href="leave.html">
-		<div class="col-md-4"><img class="img-responsive" src="img/01.jpg" alt="é›¢é–‹æ‚²å‚·ä¹‹å¾Œ">é›¢é–‹æ‚²å‚·ä¹‹å¾Œ /book redesign
-		</div></a>
-
-		<a href="bubble.html">
-		<div class="col-md-4"><img class="img-responsive" src="img/03-1.jpg" alt="é›¢é–‹æ‚²å‚·ä¹‹å¾Œ">Bubble Party /invitation card
-		</div></a>
-
-		<div class="col-md-4">æˆ‘å€‘æ¨å‡ºäº†å…¨æ–°çš„ã€Œæ„›ä¸Šè‡ªå·±ç”¢å“åŒ…ã€ï¼Œç”¨äº†ä¹‹å¾Œå°±æœƒæ›´æ„›åˆ¥äººé¤’ã€‚<br></div>
-
-	
-		<h5>Ask me anything! <a href="mailto:korpercola@gmail.com">korpercola@gmail.com</a></h5>
-
-			<h6> He-Qian Chen, GRAPHIC DESIGNER, born and raised in Keelung. Now lives in Taipei.</h6>
-	<script src="https://code.jquery.com/jquery.js">
-	</script>
-	<script src="js/bootstrap.min.js" type="text/javascript">
-	</script>
-
-	<script src="js/footer.js"></script>
-
-
-	</body>
+</body>
 </html>
