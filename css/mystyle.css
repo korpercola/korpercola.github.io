@@ -7,32 +7,13 @@ li{
 	width:20em;
 	height:50em;
 	margin: 0 auto;
-	padding-top: 5em;
+	padding-top: 8em;
 }
 div{
--webkit-animation: opacity_01 3s ease 0s 1 alternate;
+-webkit-animation: opacity_01 1.5s ease 0s 1 alternate;
 }
 
-.embFont02{
-	color:#333;
-	margin: .4em;
-	margin-right: -.1em;
-	text-align: right;
-	font-family: T2;
-	font-size: 2.5em;
-	-webkit-font-smoothing: antialiased;
-	-webkit-animation: opacity_01 7s ease 0s 1 alternate;
-}
-/*element.style {
-  -webkit-animation: bg-color 2s cubic-bezier(0.6, -0.5, 0.4, 1.4) 0s infinite normal none running;
-  -webkit-animation-play-state: running;
-}*/
 
-
-/* 嵌入字型設定 */
-
- 
-/* 引用嵌入字型 */
 .embFont01 {
     font-family: T1;
     font-size: 10em;
@@ -43,7 +24,20 @@ div{
 	-webkit-font-smoothing: subpixel-antialiased;
 }
  
-
+.embFont02{
+	font-family: T2;
+	color:#333;
+	margin: .2em;
+	margin-right: -.1em;
+	text-align: right;
+	font-size: 2.5em;
+	-webkit-font-smoothing: antialiased;
+	-webkit-animation: opacity_01 7s ease 0s 1 alternate;
+}
+/*element.style {
+  -webkit-animation: bg-color 2s cubic-bezier(0.6, -0.5, 0.4, 1.4) 0s infinite normal none running;
+  -webkit-animation-play-state: running;
+}*/
 
 @-webkit-keyframes opacity_01
 {
@@ -55,6 +49,8 @@ div{
     from { opacity: 1 ; }
   	  to { opacity: 0; }
 }
+
+
 /*animation: myAnimation 2 2 0 1 direction;*/
 /*animation-name: 動畫名稱;
 animation-duration: 動畫作用時間;
