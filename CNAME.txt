@@ -1,3 +1,0 @@
-Domain design.hencworkshop.com
-URL hencworkshop.com
-Type Redirect (301) 
