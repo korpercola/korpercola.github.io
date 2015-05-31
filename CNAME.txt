@@ -1,3 +1,0 @@
-Domain darwin.ns.cloudflare.com
-URL desi.ns.cloudflare.com
-Type Redirect (301) 
